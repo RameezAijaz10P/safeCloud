@@ -1,0 +1,28 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="box box-default collapsed-box" ng-repeat="chunk in fileUploadController.original_file.chunks">
+    <div class="box-header with-border">
+        <h3 class="box-title">{{chunk.name}}</h3>
+
+
+        <!-- /.box-tools -->
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body" role="tabpanel" style="height: 300px; overflow-y: auto">
+        {{chunk.content}}
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+        <a class="btn btn-block btn-social btn-dropbox"  ng-click="fileUploadController.uploadChunk(chunk,$index)">
+            <i class="fa fa-dropbox"></i> Upload to DropBox
+        </a>
+
+        <a class=" btn btn-block btn-social g-savetodrive"
+           data-src="{{chunk.src}}"
+           data-filename="{{chunk.name}}"
+           data-sitename="{{chunk.name}}"
+           ng-click="fileUploadController.uploadChunk(chunk,$index)">
+            <i class="fa fa-dropbox"></i> Upload to GoogleDrive
+        </a>
+    </div>
+
+</div>

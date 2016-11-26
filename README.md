@@ -8,6 +8,7 @@ Split file into user defined number of chunks and then upload each chunk to diff
 5. DiskDB (Database)
 6. Bcrypt (encrypting the user credentials)
 7. Heroku (Public domain used for server side)
+
 #How to Run the Application:
 1. Extract the project folder
 2. Go into development folder
